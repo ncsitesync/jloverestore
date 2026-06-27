@@ -205,6 +205,14 @@ body{
   transition:background .2s;
 }
 .nav-book:hover{background:var(--red-dim);}
+.nav-work-link{
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.85rem;
+  transition:color .2s;
+}
+.nav-work-link:hover{color:var(--red);}
 /* FLOATING SEE OUR WORK TAB */
 .see-work-tab{
   position:fixed;
@@ -591,6 +599,11 @@ body{
   font-size:.85rem;
   opacity:.7;
 }
+.footer-powered{
+  font-size:.72rem;
+  color:#94a3b8;
+  margin-top:6px;
+}
 
 /* INSTAGRAM */
 .instagram-section{
@@ -675,6 +688,7 @@ body{
     </a>
     <div class="nav-right">
       <a href="tel:7045245220" class="nav-phone">(704) 524-5220</a>
+      <a href="ourwork.html" class="nav-work-link">See Our Work</a>
       <a href="#request-service" class="nav-book">Book Now</a>
     </div>
   </div>
@@ -828,6 +842,7 @@ body{
     </div>
     <div class="footer-bottom">
       © <span id="year"></span> JLove Restorations • Premium Sneaker Care
+      <div class="footer-powered">Powered by SiteSync</div>
     </div>
   </div>
 </footer>
@@ -892,8 +907,7 @@ window.addEventListener("scroll", () => {
   var shown = false;
   function showTab(){
     if (shown) return;
-    var scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    if (scrolled >= 0.5){
+    if (window.scrollY >= 200){
       tab.classList.add('visible');
       shown = true;
     }
