@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -24,10 +24,13 @@
 html{scroll-behavior:smooth;}
 body{
   font-family:'Poppins',sans-serif;
-  background:linear-gradient(160deg,#16181d 0%,#272a31 35%,#525560 75%,var(--bg) 100%) fixed;
+  background:#1a1a1a;
   color:var(--text);
   line-height:1.6;
   overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
 }
 
 .graffiti{
@@ -213,6 +216,14 @@ body{
   transition:background .2s;
 }
 .nav-book:hover{background:var(--red-dim);}
+.nav-work{
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.85rem;
+  transition:color .2s;
+}
+.nav-work:hover{color:var(--red);}
 
 /* HERO */
 .hero{
@@ -237,15 +248,19 @@ body{
   font-size:2rem;
   font-weight:800;
   line-height:1.2;
+  color:#ffffff;
+  -webkit-font-smoothing:antialiased;
 }
 .hero h1 .graffiti{
   display:block;
   font-size:2.4rem;
   line-height:1.1;
   margin-top:8px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 .hero p{
-  color:var(--text);
+  color:#d4d4d4;
   margin-top:15px;
   font-size:1rem;
 }
@@ -298,12 +313,14 @@ body{
 }
 .stat-item:last-child{border-right:none;}
 .stat-num{
-  font-family:'Rubik Dirt',cursive;
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
   font-size:2.4rem;
   color:var(--red);
   line-height:1;
   display:block;
   margin-bottom:8px;
+  -webkit-font-smoothing:antialiased;
 }
 .stat-label{
   font-size:.8rem;
@@ -469,12 +486,14 @@ body{
 .process-card:nth-child(2){animation-delay:0.4s;}
 .process-card:nth-child(3){animation-delay:0.8s;}
 .step-num{
-  font-family:'Rubik Dirt',cursive;
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
   color:var(--red);
   font-size:2.2rem;
   display:block;
   margin-bottom:15px;
   line-height:1;
+  -webkit-font-smoothing:antialiased;
 }
 .process-card h4{
   font-size:1.05rem;
@@ -541,6 +560,39 @@ body{
   opacity:.7;
 }
 
+/* INSTAGRAM */
+.instagram-section{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.instagram-card{
+  background:#fff;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 10px 35px rgba(0,0,0,.06);
+  animation:subtlePulse 5s ease-in-out infinite;
+}
+.instagram-cta{
+  text-align:center;
+}
+.lightwidget-widget{
+  width:100%;
+}
+
+/* OUR WORK PAGE */
+#our-work{
+  border-top:4px solid var(--red);
+  background:#111;
+}
+#our-work .section-title,
+#our-work .section-sub{
+  color:#f1f1f1;
+}
+#our-work .section-title::after{
+  background:var(--red);
+}
+
 /* RESPONSIVE */
 @media(min-width:900px){
   .hero-grid{
@@ -592,6 +644,7 @@ body{
     </a>
     <div class="nav-right">
       <a href="tel:7045245220" class="nav-phone">(704) 524-5220</a>
+      <a href="#our-work" class="nav-work">See Our Work</a>
       <a href="#request-service" class="nav-book">Book Now</a>
     </div>
   </div>
@@ -632,7 +685,7 @@ body{
     <div class="stats-bar">
       <div class="stats-inner">
         <div class="stat-item">
-          <span class="stat-num">500+</span>
+          <span class="stat-num">100+</span>
           <span class="stat-label">Pairs Cleaned</span>
         </div>
         <div class="stat-item">
@@ -674,130 +727,6 @@ body{
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">The Work</h2>
-    <p class="section-sub">Real pairs. Real results. Add your photos here to show off your best restorations.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item featured">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">👟</span>
-          <span>Image 1</span>
-        </div>
-        <span class="gallery-tag">Featured</span>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">✨</span>
-          <span>Image 2</span>
-        </div>
-        <span class="gallery-tag">Clean</span>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">🔴</span>
-          <span>Image 3</span>
-        </div>
-        <span class="gallery-tag">Restore</span>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">👟</span>
-          <span>Image 4</span>
-        </div>
-        <span class="gallery-tag">Deep Clean</span>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">✨</span>
-          <span>Image 5</span>
-        </div>
-        <span class="gallery-tag">Restore</span>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="ph-icon">🔴</span>
-          <span>Image 6</span>
-        </div>
-        <span class="gallery-tag">Fresh</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM FEED SECTION -->
-<section class="section">
-  <div class="container">
-
-    <h2 class="section-title">Latest Restorations</h2>
-
-    <p class="section-sub">
-      Follow recent sneaker restorations, transformations, client pairs, and behind-the-scenes content from Instagram.
-    </p>
-
-    <div class="instagram-section">
-
-      <!-- EMBED CARD -->
-      <div class="instagram-card">
-
-        <!-- LightWidget WIDGET -->
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-
-        <iframe
-          src="https://cdn.lightwidget.com/widgets/7d2c6e2cf7d55f7dbf9c5f5a9fcbf5f1.html"
-          scrolling="no"
-          allowtransparency="true"
-          class="lightwidget-widget"
-          style="width:100%;border:0;overflow:hidden;border-radius:20px;min-height:650px;">
-        </iframe>
-
-      </div>
-
-      <!-- FOLLOW BUTTON -->
-      <div class="instagram-cta">
-        <a
-          href="https://www.instagram.com/jlovesrestore_/"
-          target="_blank"
-          class="btn">
-          Follow @jlovesrestore_
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<style>
-
-/* INSTAGRAM SECTION */
-
-.instagram-section{
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-}
-
-.instagram-card{
-  background:#fff;
-  border-radius:24px;
-  padding:18px;
-  border:1px solid rgba(0,0,0,.08);
-  box-shadow:0 10px 35px rgba(0,0,0,.06);
-  animation:subtlePulse 5s ease-in-out infinite;
-}
-
-.instagram-cta{
-  text-align:center;
-}
-
-.lightwidget-widget{
-  width:100%;
-}
-
-</style>
-
 <!-- PROCESS -->
 <section class="section">
   <div class="container">
@@ -836,6 +765,69 @@ body{
         height="1000"
         style="background:transparent;border:1px solid #ccc;">
       </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="section" id="our-work">
+  <div class="container">
+    <h2 class="section-title">See Our Work</h2>
+    <p class="section-sub">Real pairs. Real results. Add your photos here to show off your best restorations.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item featured">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#128095;</span>
+          <span>Image 1</span>
+        </div>
+        <span class="gallery-tag">Featured</span>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#10024;</span>
+          <span>Image 2</span>
+        </div>
+        <span class="gallery-tag">Clean</span>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#128095;</span>
+          <span>Image 3</span>
+        </div>
+        <span class="gallery-tag">Restore</span>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#128095;</span>
+          <span>Image 4</span>
+        </div>
+        <span class="gallery-tag">Deep Clean</span>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#10024;</span>
+          <span>Image 5</span>
+        </div>
+        <span class="gallery-tag">Restore</span>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">&#128095;</span>
+          <span>Image 6</span>
+        </div>
+        <span class="gallery-tag">Fresh</span>
+      </div>
+    </div>
+    <div class="instagram-section" style="margin-top:50px;">
+      <h2 class="section-title">Latest Restorations</h2>
+      <p class="section-sub">Follow recent sneaker restorations, transformations, client pairs, and behind-the-scenes content from Instagram.</p>
+      <div class="instagram-card">
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="https://cdn.lightwidget.com/widgets/7d2c6e2cf7d55f7dbf9c5f5a9fcbf5f1.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;border-radius:20px;min-height:650px;"></iframe>
+      </div>
+      <div class="instagram-cta" style="margin-top:20px;">
+        <a href="https://www.instagram.com/jlovesrestore_/" target="_blank" class="btn">Follow @jlovesrestore_</a>
+      </div>
     </div>
   </div>
 </section>
